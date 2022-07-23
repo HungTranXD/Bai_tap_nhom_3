@@ -1,15 +1,15 @@
-<div class="product-card-container-right" id="product-card-container" *ngIf="data">
-  <div class="product-card" *ngFor="let s of data.data">
+<div class="product-card-container-right" *ngIf="data">
+  <div class="product-card" *ngFor="let b of data.data.foods">
     <div class="product-image">
       <div class="product-status">New</div>
-      <a href="#"><img src="{{s.image}}"></a>
+      <a href="#"><img src="{{b.image}}"></a>
       <a href="#"><i class="fa-solid fa-heart like-icon"></i></a>
       <a href="#"><i class="fa-solid fa-shuffle shuffle-icon"></i></a>
     </div>
-    <div class="product-name"><a href="#">{{s.name}}</a></div>
+    <div class="product-name"><a href="#">{{b.name}}</a></div>
     <div>
       <div class="product-price-and-rating">
-        <div class="product-price">{{s.price}} VND</div>
+        <div class="product-price">{{b.price}} VND</div>
         <div class="product-rating">
           <i class="fa-solid fa-star checked"></i>
           <i class="fa-solid fa-star checked"></i>

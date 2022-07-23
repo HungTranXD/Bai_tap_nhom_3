@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="categories-container-left" id="categories-container" *ngIf="data">
+  <h3 class="categories-header" routerLink="">Product categories</h3>
+  <div class="categories-item" *ngFor="let c of data.data; let i = index">
+    <div class="categories-item-name"><a routerLink="/{{c.id}}">{{c.name}}</a></div>
+    <div class="categories-item-image"><a routerLink="/{{c.id}}"><img src="{{c.icon}}"></a></div>
+  </div>
+</div>
